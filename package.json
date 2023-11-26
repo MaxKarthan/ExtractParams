@@ -1,0 +1,20 @@
+{
+  "name": "typescript_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --project ./tsconfig.json && node --experimental-sea-config sea-config.json && node -e \"require('fs').copyFileSync(process.execPath, './build/extract_cfg_parameter.exe')\" && signtool remove /s ./build/extract_cfg_parameter.exe && npx postject ./build/extract_cfg_parameter.exe NODE_SEA_BLOB ./build/sea-prep.blob ^ --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.10.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
